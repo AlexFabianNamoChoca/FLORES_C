@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/flowers.png" type="image/x-icon">
+    <title>FELIZ DIA </title>
+</head>
+<body>
+    <div class="greetings">
+        <span>H</span>
+        <span>O</span>
+        <span>L</span>
+        <span>A</span>
+    </div>
+    <div class="greetings">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="description">
+        <span>Tengo un regalo especial para ti!!</span>
+    </div>
+    <div class="button">
+        <!-- Asigna el id al botón -->
+        <button id="playButton">Haz Clic Aquí</button>
+    </div>
+
+    <!-- Agrega la etiqueta de audio para reproducir la canción -->
+    <audio id="myAudio" loop>
+        <source src="img/Bruno Mars - Just The Way You Are.mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+
+    <script>
+        // Obtener el botón y el elemento de audio
+        const playButton = document.getElementById('playButton');
+        const audio = document.getElementById('myAudio');
+
+        // Función para reproducir la canción
+        function playAudio() {
+            audio.play();
+        }
+
+        // Agregar el evento click al botón
+        playButton.addEventListener('click', function() {
+            playAudio();
+            // Abrir la siguiente página en una nueva pestaña o ventana
+            window.open('FLORES.html', '_blank');
+        });
+    </script>
+</body>
+</html>
